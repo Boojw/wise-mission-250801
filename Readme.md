@@ -12,7 +12,7 @@ public class Main {
 
         while(true) {
             System.out.print("명령) ");
-@@ -18,10 +19,12 @@
+
                 sc.nextLine();
                 System.out.print("작가 : ");
                 sc.nextLine();
@@ -25,4 +25,3 @@ public class Main {
             }
         }
     }
-}
