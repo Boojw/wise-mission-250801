@@ -32,11 +32,9 @@ public class Main {
                 System.out.print("id=");
                 int chgnum = sc.nextInt();
                 sc.nextLine();
-                // 해당 번호 파일의 존재 유무 담을 boolean
                 boolean found = false;
 
                 for(int i = 0; i < sayinglist.size(); i++) {
-                    // 변경할 파일의 번호와 동일한 번호가 있다면
                     if(sayinglist.get(i).id == chgnum) {
                         System.out.println("명언(기존) : " + sayinglist.get(i).saying);
                         System.out.print("명언 : ");
@@ -56,8 +54,6 @@ public class Main {
                         break;
                     }
                 }
-
-                // 변경할 파일의 번호와 동일한 번호가 없다면
                 if (!found) {
                     System.out.println(chgnum + "번 명언은 존재하지 않습니다.");
                 }
@@ -68,7 +64,6 @@ public class Main {
                 boolean found = false;
 
                 for(int i = 0; i < sayinglist.size(); i++) {
-                    // 변경할 파일의 번호와 동일한 번호가 있다면
                     if(sayinglist.get(i).id == delnum) {
                         sayinglist.remove(i);
                         System.out.println(delnum + "번 명언이 삭제되었습니다.");
@@ -76,14 +71,12 @@ public class Main {
                         break;
                     }
                 }
-
-                // 변경할 파일의 번호와 동일한 번호가 없다면
                 if (!found) {
                     System.out.println(delnum + "번 명언은 존재하지 않습니다.");
                 }
             } else if (command.equals("목록")) {
                 System.out.println("번호 / 작가 / 명언");
-                System.out.println("----------------------");
+                System.out.println("--------------------");
 
                 for(int i = sayinglist.size() - 1; i >= 0; i--) {
                     WiseSaying ws = sayinglist.get(i);
